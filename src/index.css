@@ -1,0 +1,249 @@
+/* General Body and Font Styles */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f7fafc;
+  color: #1a202c;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* Header Styles */
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #2d3748;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4a5568;
+}
+
+.header-button:hover {
+  color: #2d3748;
+}
+
+.menu-button-mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .menu-button-mobile {
+    display: none;
+  }
+}
+
+
+/* Product Grid Styles */
+.product-grid-container {
+  padding: 2rem 0;
+}
+
+.product-grid-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #2d3748;
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Product Card Styles */
+.product-card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-0.5rem);
+}
+
+.product-image-wrapper {
+  position: relative;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 3 / 4;
+}
+
+.product-card-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.product-card:hover .product-card-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.quick-view-button {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(1rem);
+  background-color: #ffffff;
+  color: #2d3748;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  opacity: 0;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.product-card:hover .quick-view-button {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.product-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.product-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2d3748;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-price {
+  color: #4a5568;
+  margin-top: 0.25rem;
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-button {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background-color: #25d366;
+  color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.whatsapp-button:hover {
+  background-color: #128c7e;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #2d3748;
+  color: white;
+  margin-top: auto;
+}
+
+.footer-content {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-socials a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-socials a:hover {
+  color: #a0aec0;
+}
