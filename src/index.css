@@ -1,9 +1,11 @@
 /* General Body and Font Styles */
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: #f7fafc;
   color: #1a202c;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #root {
@@ -23,31 +25,28 @@ main {
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+  box-sizing: border-box;
 }
 
 @media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
+  .container { max-width: 640px; }
 }
 @media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
+  .container { max-width: 768px; }
 }
 @media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
+  .container { max-width: 1024px; }
 }
 
 /* Header Styles */
 .header {
-  background-color: #ffffff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 50;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .header-content {
@@ -59,9 +58,9 @@ main {
 
 .header-title {
   font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: #2d3748;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #1a202c;
 }
 
 .header-icons {
@@ -78,7 +77,7 @@ main {
 }
 
 .header-button:hover {
-  color: #2d3748;
+  color: #1a202c;
 }
 
 .menu-button-mobile {
@@ -86,54 +85,114 @@ main {
 }
 
 @media (min-width: 768px) {
-  .menu-button-mobile {
-    display: none;
-  }
+  .menu-button-mobile { display: none; }
 }
 
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-image: url('https://placehold.co/1920x1080/1a202c/4a5568?text=Football+Jerseys');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  opacity: 0.9;
+}
+
+.hero-button {
+  background-color: #ffffff;
+  color: #1a202c;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
 
 /* Product Grid Styles */
 .product-grid-container {
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 
 .product-grid-title {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 800;
   text-align: center;
-  color: #2d3748;
-  margin-bottom: 2rem;
+  color: #1a202c;
+  margin-bottom: 2.5rem;
 }
 
 .product-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 @media (min-width: 640px) {
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .product-grid {
     grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
   }
 }
 
 /* Product Card Styles */
 .product-card {
   background-color: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   overflow: hidden;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 1px solid #e2e8f0;
 }
 
 .product-card:hover {
   transform: translateY(-0.5rem);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 .product-image-wrapper {
@@ -145,17 +204,18 @@ main {
   height: auto;
   object-fit: cover;
   aspect-ratio: 3 / 4;
+  display: block;
 }
 
 .product-card-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s;
 }
 
 .product-card:hover .product-card-overlay {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .quick-view-button {
@@ -164,7 +224,7 @@ main {
   left: 50%;
   transform: translateX(-50%) translateY(1rem);
   background-color: #ffffff;
-  color: #2d3748;
+  color: #1a202c;
   font-weight: 600;
   padding: 0.5rem 1.5rem;
   border-radius: 9999px;
@@ -185,9 +245,9 @@ main {
 }
 
 .product-name {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: #2d3748;
+  color: #1a202c;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -196,6 +256,32 @@ main {
 .product-price {
   color: #4a5568;
   margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+/* Flip Button */
+.flip-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  color: #2d3748;
+  transition: transform 0.3s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.flip-button:hover {
+  transform: rotate(180deg);
+  background-color: white;
 }
 
 /* Floating WhatsApp Button */
@@ -207,8 +293,8 @@ main {
   color: white;
   padding: 1rem;
   border-radius: 50%;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  transition: background-color 0.3s;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
   z-index: 30;
   display: flex;
   align-items: center;
@@ -217,33 +303,84 @@ main {
 }
 
 .whatsapp-button:hover {
-  background-color: #128c7e;
+  transform: scale(1.1);
 }
 
-/* Footer Styles */
-.footer {
-  background-color: #2d3748;
+/* Floating Instagram Button */
+.instagram-button {
+  position: fixed;
+  bottom: 6.5rem; /* Position it above the WhatsApp button */
+  right: 1.5rem;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   color: white;
-  margin-top: auto;
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.instagram-button:hover {
+  transform: scale(1.1);
+}
+
+/* Updated Footer Styles */
+.footer {
+  background-color: #1a202c;
+  color: #a0aec0;
+  padding-top: 3rem;
 }
 
 .footer-content {
-  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  gap: 1.5rem;
+}
+
+.footer-brand {
+  margin-bottom: 1rem;
+}
+
+.footer-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+.footer-tagline {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  color: #718096;
 }
 
 .footer-socials {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 1.5rem;
 }
 
-.footer-socials a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-socials a:hover {
+.social-icon {
   color: #a0aec0;
+  transition: color 0.3s, transform 0.3s;
 }
+
+.social-icon:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  border-top: 1px solid #2d3748;
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #718096;
+}
+

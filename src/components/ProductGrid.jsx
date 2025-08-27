@@ -1,146 +1,148 @@
 import React from 'react';
 import ProductCard from './ProductCard';
 
+// --- All 28 Images Imported ---
+import tshirt1Front from '../images/IMG_4627.jpg'; // Ronaldo
+import tshirt1Back from '../images/IMG_4628.jpg';
+import tshirt2Front from '../images/IMG_4629.jpg'; // Barcelona
+import tshirt2Back from '../images/IMG_4630.jpg';
+import tshirt3Front from '../images/IMG_4631.jpg'; // Argentina
+import tshirt3Back from '../images/IMG_4632.jpg';
+import tshirt4Front from '../images/IMG_4633.jpg'; // Maldini
+import tshirt4Back from '../images/IMG_4634.jpg';
+import tshirt5Front from '../images/IMG_4635.jpg'; // PSG
+import tshirt5Back from '../images/IMG_4636.jpg';
+import tshirt6Front from '../images/IMG_4637.jpg'; // Germany
+import tshirt6Back from '../images/IMG_4638.jpg';
+import tshirt7Front from '../images/IMG_4639.jpg'; // Barcelona Spotify
+import tshirt7Back from '../images/IMG_4640.jpg';
+import tshirt8Front from '../images/IMG_4641.jpg'; // England
+import tshirt8Back from '../images/IMG_4642.jpg';
+import tshirt9Front from '../images/IMG_3753.jpg'; // Inter Milan
+import tshirt9Back from '../images/IMG_3754.jpg';
+import tshirt10Front from '../images/IMG_3755.jpg'; // Real Madrid
+import tshirt10Back from '../images/IMG_3756.jpg';
+import tshirt11Front from '../images/IMG_3757.jpg'; // Real Madrid Away
+import tshirt11Back from '../images/IMG_3758.jpg';
+import tshirt12Front from '../images/IMG_3759.jpg'; // Real Madrid 3rd
+import tshirt12Back from '../images/IMG_3760.jpg';
+import tshirt13Front from '../images/IMG_3761.jpg'; // Man United Away
+import tshirt13Back from '../images/IMG_3762.jpg';
+import tshirt14Front from '../images/IMG_3777.jpg'; // France '98
+
+// --- Product List Expanded to 14 T-Shirts ---
 const products = [
   {
     id: 1,
-    name: 'Classic Crew Neck',
-    price: '$24.99',
-    imageUrl: 'https://placehold.co/600x800/2D3748/FFFFFF?text=T-Shirt+1',
-    alt: 'Classic Crew Neck T-Shirt',
+    name: 'Man United \'07-\'08 Home',
+    price: '₹329', // Normal
+    imageUrl: tshirt1Front,
+    imageUrlBack: tshirt1Back,
+    alt: 'Ronaldo 7 Jersey',
   },
   {
     id: 2,
-    name: 'Vintage Graphic Tee',
-    price: '$29.99',
-    imageUrl: 'https://placehold.co/600x800/4A5568/FFFFFF?text=T-Shirt+2',
-    alt: 'Vintage Graphic T-Shirt',
+    name: 'Barcelona \'13-\'14 Home',
+    price: '₹329', // Normal
+    imageUrl: tshirt2Front,
+    imageUrlBack: tshirt2Back,
+    alt: 'Barcelona Home Kit',
   },
   {
     id: 3,
-    name: 'Modern V-Neck',
-    price: '$26.99',
-    imageUrl: 'https://placehold.co/600x800/718096/FFFFFF?text=T-Shirt+3',
-    alt: 'Modern V-Neck T-Shirt',
+    name: 'Argentina \'22 Home',
+    price: '₹329', // Normal
+    imageUrl: tshirt3Front,
+    imageUrlBack: tshirt3Back,
+    alt: 'Argentina World Cup Jersey',
   },
   {
     id: 4,
-    name: 'Urban Street Style',
-    price: '$32.99',
-    imageUrl: 'https://placehold.co/600x800/A0AEC0/FFFFFF?text=T-Shirt+4',
-    alt: 'Urban Street Style T-Shirt',
+    name: 'AC Milan \'06-\'07 Away',
+    price: '₹329', // Normal
+    imageUrl: tshirt4Front,
+    imageUrlBack: tshirt4Back,
+    alt: 'Maldini 3 Retro Jersey',
   },
   {
     id: 5,
-    name: 'Eco-Friendly Cotton',
-    price: '$28.99',
-    imageUrl: 'https://placehold.co/600x800/CBD5E0/2D3748?text=T-Shirt+5',
-    alt: 'Eco-Friendly Cotton T-Shirt',
+    name: 'PSG \'22-\'23 Away',
+    price: '₹329', // Normal
+    imageUrl: tshirt5Front,
+    imageUrlBack: tshirt5Back,
+    alt: 'PSG Away Kit',
   },
   {
     id: 6,
-    name: 'Minimalist Design',
-    price: '$25.99',
-    imageUrl: 'https://placehold.co/600x800/E2E8F0/2D3748?text=T-Shirt+6',
-    alt: 'Minimalist Design T-Shirt',
+    name: 'Germany \'14 Away',
+    price: '₹329', // Normal
+    imageUrl: tshirt6Front,
+    imageUrlBack: tshirt6Back,
+    alt: 'Germany Away Kit',
   },
   {
     id: 7,
-    name: 'Henley Long Sleeve',
-    price: '$34.99',
-    imageUrl: 'https://placehold.co/600x800/4FD1C5/FFFFFF?text=T-Shirt+7',
-    alt: 'Henley Long Sleeve',
+    name: 'Barcelona \'22-\'23 Away',
+    price: '₹329', // Normal
+    imageUrl: tshirt7Front,
+    imageUrlBack: tshirt7Back,
+    alt: 'Barcelona Spotify Kit',
   },
   {
     id: 8,
-    name: 'Striped Pocket Tee',
-    price: '$27.99',
-    imageUrl: 'https://placehold.co/600x800/F6E05E/2D3748?text=T-Shirt+8',
-    alt: 'Striped Pocket Tee',
+    name: 'England \'02-\'04 Home',
+    price: '₹379', // Collar
+    imageUrl: tshirt8Front,
+    imageUrlBack: tshirt8Back,
+    alt: 'England Retro Kit',
   },
   {
     id: 9,
-    name: 'Ringer T-Shirt',
-    price: '$26.99',
-    imageUrl: 'https://placehold.co/600x800/F56565/FFFFFF?text=T-Shirt+9',
-    alt: 'Ringer T-Shirt',
+    name: 'Inter Milan \'07-\'08 Away',
+    price: '₹379', // Collar
+    imageUrl: tshirt9Front,
+    imageUrlBack: tshirt9Back,
+    alt: 'Inter Milan Away Kit',
   },
   {
     id: 10,
-    name: 'Slub Knit Tee',
-    price: '$31.99',
-    imageUrl: 'https://placehold.co/600x800/63B3ED/FFFFFF?text=T-Shirt+10',
-    alt: 'Slub Knit Tee',
+    name: 'Real Madrid \'06-\'07 Home',
+    price: '₹329', // Collar
+    imageUrl: tshirt10Front,
+    imageUrlBack: tshirt10Back,
+    alt: 'Real Madrid Home Kit',
   },
   {
     id: 11,
-    name: 'Tri-Blend Crew',
-    price: '$29.99',
-    imageUrl: 'https://placehold.co/600x800/76E4F7/2D3748?text=T-Shirt+11',
-    alt: 'Tri-Blend Crew',
+    name: 'Real Madrid \'06-\'07 Away',
+    price: '₹379', // Collar
+    imageUrl: tshirt11Front,
+    imageUrlBack: tshirt11Back,
+    alt: 'Real Madrid Away Kit',
   },
   {
     id: 12,
-    name: 'Heavyweight Tee',
-    price: '$35.99',
-    imageUrl: 'https://placehold.co/600x800/B794F4/FFFFFF?text=T-Shirt+12',
-    alt: 'Heavyweight Tee',
+    name: 'Real Madrid \'11-\'12 Home',
+    price: '₹329', // Collar
+    imageUrl: tshirt12Front,
+    imageUrlBack: tshirt12Back,
+    alt: 'Real Madrid Home Kit',
   },
   {
     id: 13,
-    name: 'Performance Dry-Fit',
-    price: '$39.99',
-    imageUrl: 'https://placehold.co/600x800/F687B3/FFFFFF?text=T-Shirt+13',
-    alt: 'Performance Dry-Fit',
+    name: 'Man United \'08-\'09 Away',
+    price: '₹379', // Collar
+    imageUrl: tshirt13Front,
+    imageUrlBack: tshirt13Back,
+    alt: 'Man United Away Kit',
   },
   {
     id: 14,
-    name: 'Faded Wash Tee',
-    price: '$33.99',
-    imageUrl: 'https://placehold.co/600x800/A0AEC0/FFFFFF?text=T-Shirt+14',
-    alt: 'Faded Wash Tee',
-  },
-  {
-    id: 15,
-    name: 'Raglan Sleeve Tee',
-    price: '$30.99',
-    imageUrl: 'https://placehold.co/600x800/ED8936/FFFFFF?text=T-Shirt+15',
-    alt: 'Raglan Sleeve Tee',
-  },
-  {
-    id: 16,
-    name: 'Embroidered Logo Tee',
-    price: '$36.99',
-    imageUrl: 'https://placehold.co/600x800/48BB78/FFFFFF?text=T-Shirt+16',
-    alt: 'Embroidered Logo Tee',
-  },
-  {
-    id: 17,
-    name: 'Tie-Dye Swirl',
-    price: '$38.99',
-    imageUrl: 'https://placehold.co/600x800/9F7AEA/FFFFFF?text=T-Shirt+17',
-    alt: 'Tie-Dye Swirl',
-  },
-  {
-    id: 18,
-    name: 'Scoop Neck Tee',
-    price: '$25.99',
-    imageUrl: 'https://placehold.co/600x800/ECC94B/2D3748?text=T-Shirt+18',
-    alt: 'Scoop Neck Tee',
-  },
-  {
-    id: 19,
-    name: 'Linen Blend T-Shirt',
-    price: '$42.99',
-    imageUrl: 'https://placehold.co/600x800/4299E1/FFFFFF?text=T-Shirt+19',
-    alt: 'Linen Blend T-Shirt',
-  },
-  {
-    id: 20,
-    name: 'Boxy Fit Tee',
-    price: '$31.99',
-    imageUrl: 'https://placehold.co/600x800/38B2AC/FFFFFF?text=T-Shirt+20',
-    alt: 'Boxy Fit Tee',
+    name: 'France \'98 Home',
+    price: '₹379', // Collar
+    imageUrl: tshirt14Front,
+    imageUrlBack: tshirt14Front, // Using front image again as no back is available
+    alt: 'France 98 Home Kit',
   },
 ];
 
@@ -156,4 +158,3 @@ const ProductGrid = () => (
 );
 
 export default ProductGrid;
-
