@@ -5,15 +5,13 @@ const Header = () => (
   <header className="header">
     <div className="container">
       <div className="header-content">
-        <h1 className="header-title">T-shirt</h1>
-        <div className="header-icons">
-          <button className="header-button">
-            <ShoppingCart size={24} />
-          </button>
-          <button className="header-button menu-button-mobile">
-            <Menu size={24} />
-          </button>
+        {/* New container for logo and title */}
+        <div className="header-brand">
+          <img src="src\images\logo.png" alt="CharisRex Clothing Logo" className="header-logo" />
+          <h1 className="header-title">CharisRex Clothing</h1>
         </div>
+
+        
       </div>
     </div>
   </header>

@@ -5,23 +5,19 @@ const Footer = () => (
   <footer className="footer">
     <div className="container footer-content">
       <div className="footer-brand">
-        <h3 className="footer-title">TeeVibe</h3>
+        <h3 className="footer-title">CharisRex Clothing</h3>
         <p className="footer-tagline">Vintage & Modern Football Jerseys</p>
       </div>
-      <div className="footer-socials">
-        <a href="https://www.instagram.com/charisrex.clothing?igsh=MXZnOXJob2t6MzgyNA%3D%3D&utm_source=qr" aria-label="Instagram" className="social-icon">
-          <Instagram size={20} />
-        </a>
-        <a href="#" aria-label="Facebook" className="social-icon">
-          <Facebook size={20} />
-        </a>
-        <a href="#" aria-label="Twitter" className="social-icon">
-          <Twitter size={20} />
-        </a>
-      </div>
+      
     </div>
     <div className="footer-bottom">
-      <p>&copy; {new Date().getFullYear()} CharisRex Clothing. All Rights Reserved.</p>
+
+      <div className="developer-credit">
+        <p>Designed & Developed by <strong>SANJITH S</strong></p>
+        <p className="freelance-contact">
+          For freelance web development and Desining, contact: <strong>9894755053</strong>
+        </p>
+      </div>
     </div>
   </footer>
 );

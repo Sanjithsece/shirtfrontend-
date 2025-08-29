@@ -383,4 +383,36 @@ main {
   font-size: 0.875rem;
   color: #718096;
 }
+/* New Styles for Developer Credit in Footer */
+
+
+.freelance-contact {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* New Styles for Header Logo */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Space between logo and title */
+}
+
+.header-logo {
+  height: 40px; /* Adjust size as needed */
+  width: auto;
+}
+
+/* New Styles for Header Logo */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Space between logo and title */
+}
+
+.header-logo {
+  height: 40px; /* Adjust size as needed */
+  width: auto;
+}
+
 
