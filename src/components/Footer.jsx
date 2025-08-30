@@ -6,7 +6,8 @@ const Footer = () => (
     <div className="container footer-content">
       <div className="footer-brand">
         <h3 className="footer-title">CharisRex Clothing</h3>
-        <p className="footer-tagline">Vintage & Modern Football Jerseys</p>
+        <p className="footer-tagline">Vintage & Modern Football Jerseys... ! T-shirts with a collar: ₹379 || 
+T-shirts without a collar (normal): ₹329</p>
       </div>
       
     </div>
