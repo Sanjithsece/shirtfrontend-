@@ -104,7 +104,7 @@ const products = [
   { id: 31, name: 'Barcelona \'08-\'09 Home', price: '₹329', imageUrl: tshirt31Front, imageUrlBack: tshirt31Back, alt: 'Barcelona Home Kit' },
   { id: 32, name: 'Dortmund \'12-\'13 Home', price: '₹379', imageUrl: tshirt32Front, imageUrlBack: tshirt32Back, alt: 'Dortmund Home Kit' },
   { id: 33, name: 'Dortmund \'13-\'14 CL', price: '₹379', imageUrl: tshirt33Front, imageUrlBack: tshirt33Back, alt: 'Dortmund CL Kit' },
-  { id: 34, name: 'Chelsea \'12-\'13 Home', price: '₹329', imageUrl: tshirt34Front, imageUrlBack: tshirt34Back, alt: 'Chelsea Home Kit' },
+  { id: 34, name: 'Chelsea \'12-\'13 Home', price: '₹379', imageUrl: tshirt34Front, imageUrlBack: tshirt34Back, alt: 'Chelsea Home Kit' },
   { id: 35, name: 'Liverpool \'06-\'07 Home', price: '₹379', imageUrl: tshirt35Front, imageUrlBack: tshirt35Back, alt: 'Liverpool Home Kit' },
 ];
 
